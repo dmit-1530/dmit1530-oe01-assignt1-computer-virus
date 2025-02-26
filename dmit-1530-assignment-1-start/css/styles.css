@@ -21,7 +21,7 @@ body {
 header,
 footer {
 	color: #fff;
-	padding: 2rem 4rem;
+	padding: 2rem;
 }
 
 	/* Typography */
@@ -33,7 +33,7 @@ footer {
 	}
 
 h2 {
-	font-family: Georgia, serif;
+	font-family: "Georgia", serif;
 	font-weight: normal;
 	font-size: 2rem;
 }
@@ -92,7 +92,7 @@ header {
 		}
 
 main > section {
-	padding: 4rem;
+	padding: 4rem 2rem;
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
@@ -138,17 +138,58 @@ main > section {
 	background-color: var(--architecture-blue);
 }
 
+	.architecture > section {
+		text-align: left;
+	}
+
+	.architecture img {
+		border-radius: 0.5rem;
+	}
+
 .signup {
 	background-color: var(--signup-grey);
 }
 
 	.signup > div {
 		background-color: #fff;
+		border-radius: 0.5rem;
+		padding: 4rem 2rem;
 	}
 
 footer {
 	background-color: var(--footer-gray);
 }
+
+	footer h2 {
+		margin-bottom: 0;
+	}
+
+	footer .flex-container {
+		text-align: left;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+
+	footer nav {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		width: 100%;
+	}
+
+		footer nav ul {
+			padding-left: 0;
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			gap: 1rem;
+		}
+
+		footer nav li span {
+			display: block;
+		}
 
 	footer a {
 		color: #fff;
@@ -157,4 +198,8 @@ footer {
 
 	footer p {
 		color: var(--subtle-text);
+	}
+
+	footer > p {
+		padding: 2rem 0;
 	}
