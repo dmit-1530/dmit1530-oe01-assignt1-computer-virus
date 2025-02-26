@@ -1,18 +1,80 @@
+/* Color Palette */
 :root {
 	--header-black: #111;
-    --blue-grey-50: #ECEFF1;
-    --blue-grey-100: #CFD8DC;
-    --blue-grey-200: #B0BEC5;
-    --blue-grey-900: #263238;
+	--hero-grey: #ECEFF1;
+	--footer-gray: #191919;
+	--blockquote-blue: #78909C;
+	--architecture-blue: #CFD8DC;
+	--subtle-text: #B0BEC5;
+	--signup-grey: #37474F;
 }
 
+/* Universal Styles*/
 body {
-    color: #000;
-    text-align: center; 
+	color: #000;
+	text-align: center;
+	font-family: "Arial", sans-serif;
+	max-width: 1080px;
+	width: 480px;
 }
 
-header, footer {
-    background-color: var(--header-black);
-    color: #fff;
-    padding: 2rem 4rem;   
+header {
+	background-color: var(--header-black);
 }
+
+footer {
+	background-color: var(--footer-gray);
+}
+
+header,
+footer {
+	color: #fff;
+	padding: 2rem 4rem;
+}
+
+	/* Typography */
+	h1,
+	footer h2 {
+		font-family: "Libre Baskerville", serif;
+		font-weight: normal;
+	}
+
+h2 {
+	font-family: Georgia, serif;
+	font-weight: normal;
+}
+
+h3 {
+	font-family: "Inter", sans-serif;
+	font-weight: bold;
+}
+
+/* Main Content */
+main > section {
+	padding: 2rem 4rem;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.hero {
+	background-color: var(--hero-grey);
+}
+
+.blockquote {
+	background-color: var(--blockquote-blue);
+	color: #fff;
+}
+
+.architecture {
+	background-color: var(--architecture-blue);
+}
+
+.signup {
+	background-color: var(--signup-grey);
+}
+
+	.signup > div {
+		background-color: #fff;
+	}
