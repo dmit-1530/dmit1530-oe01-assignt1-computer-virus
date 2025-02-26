@@ -37,19 +37,31 @@ h1,
 footer h2 {
 	font-family: "Libre Baskerville", serif;
 	font-weight: normal;
+	font-size: 3.5rem;
 }
 
 h2 {
 	font-family: Georgia, serif;
 	font-weight: normal;
+	font-size: 2rem;
 }
 
 h3 {
 	font-family: "Inter", sans-serif;
 	font-weight: bold;
+	font-size: 1.5rem;
 }
 
 /* Main Content */
+header a {
+	color: #fff;
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
 main > section {
 	padding: 2rem 4rem;
 }
