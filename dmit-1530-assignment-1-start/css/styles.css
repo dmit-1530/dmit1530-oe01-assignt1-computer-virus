@@ -14,12 +14,8 @@ body {
 	color: #000;
 	text-align: center;
 	font-family: "Arial", sans-serif;
+	margin: auto;
 }
-
-	body > .flex-container {
-		max-width: 1080px;
-		margin: 0 auto;
-	}
 
 header,
 footer {
@@ -27,13 +23,13 @@ footer {
 	padding: 2rem;
 }
 
-	/* Typography */
-	h1,
-	footer h2 {
-		font-family: "Libre Baskerville", serif;
-		font-weight: normal;
-		font-size: 3.5rem;
-	}
+/* Typography */
+h1,
+footer h2 {
+	font-family: "Libre Baskerville", serif;
+	font-weight: normal;
+	font-size: 3.5rem;
+}
 
 h2 {
 	font-family: "Georgia", serif;
@@ -59,29 +55,28 @@ h3 {
 /* Main Content */
 header {
 	background-color: var(--header-black);
-	display: flex;
-	flex-wrap: wrap;
 }
 
-	header h1,
-	footer h2 {
-		flex-grow: 1;
+	header > div {
+		max-width: 1080px;
+		margin: auto;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
 	}
 
-		header h1 > img,
+		header > div h1 > img,
 		footer h2 > img {
 			max-height: 3.5rem;
 		}
 
 	header nav {
-		flex-grow: 1;
 		align-content: center;
 	}
 
 		header nav ul {
 			display: flex;
-			flex-grow: 1;
-			justify-content: space-evenly;
+			gap: 1rem;
 		}
 
 		header nav ul,
@@ -96,11 +91,16 @@ header {
 
 main > section {
 	padding: 4rem 2rem;
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	gap: 2rem;
 }
+
+	main > section > div {
+		max-width: 1080px;
+		margin: auto;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		gap: 2rem;
+	}
 
 .fakebtn {
 	background: #000;
@@ -119,17 +119,25 @@ main > section {
 
 .hero {
 	background-color: var(--hero-grey);
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	gap: 2rem;
 }
 
-	.hero img {
+	.hero > img {
 		border-radius: 0.5rem;
+		width: 100%;
 	}
 
 .blockquote {
 	background-color: var(--blockquote-blue);
-	color: #fff;
-	gap: 0;
 }
+
+	.blockquote > div {
+		color: #fff;
+		gap: 0;
+	}
 
 	.blockquote p {
 		display: flex;
@@ -141,15 +149,15 @@ main > section {
 	background-color: var(--architecture-blue);
 }
 
-	.architecture > section {
+	.architecture > .flex-container > section {
 		text-align: left;
 	}
 
-		.architecture > section ul {
+		.architecture > .flex-container > section ul {
 			padding-left: 1rem;
 		}
 
-	.architecture img {
+	.architecture > .flex-container img {
 		border-radius: 0.5rem;
 	}
 
@@ -157,11 +165,12 @@ main > section {
 	background-color: var(--signup-grey);
 }
 
-	.signup > div {
+	.signup > div > div {
 		background-color: #fff;
 		border-radius: 0.5rem;
 		padding: 4rem 2rem;
-		margin: 0 auto;
+		margin: auto;
+		min-width: 60%;
 	}
 
 footer {
@@ -173,6 +182,8 @@ footer {
 	}
 
 	footer .flex-container {
+		max-width: 1080px;
+		margin: auto;
 		text-align: left;
 		display: flex;
 		flex-direction: row;
@@ -180,11 +191,16 @@ footer {
 		justify-content: space-around;
 	}
 
+		footer .flex-container > div {
+			padding: 0.5rem;
+		}
+
 	footer nav {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-around;
 		width: 100%;
+		padding: 0.5rem;
 	}
 
 		footer nav ul {
@@ -192,7 +208,6 @@ footer {
 			display: flex;
 			flex-direction: column;
 			flex-wrap: wrap;
-			gap: 1rem;
 		}
 
 		footer nav li span {
@@ -213,41 +228,62 @@ footer {
 	}
 
 /* Media Queries */
+/* Medium */
 @media (width >= 720px) {
-	.commitments .flex-container {
+	.commitments > div .flex-container {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
 	}
 
-		.commitments .flex-container > section {
+		.commitments > div .flex-container > section {
 			text-align: left;
 			max-width: 50%;
+			padding: 0.5rem;
 		}
 
-	.architecture > section {
+	.architecture > .flex-container > section {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-		justify-content: space-between;
 	}
 
-		.architecture > section:nth-child(odd) {
+		.architecture > .flex-container > section:nth-child(even) {
 			flex-direction: row-reverse;
 		}
 
-		.architecture > section > * {
-			max-width: 48%;
+		.architecture > .flex-container > section > * {
+			max-width: 50%;
+			padding: 0.5rem;
 		}
 
-		.architecture > section > img {
+		.architecture > .flex-container > section > img {
 			object-fit: contain;
 		}
 
 	footer .flex-container > * {
-		max-width: 48%;
+		max-width: 50%;
 	}
 }
 
+/* Large */
 @media (width >= 1080px) {
+	.commitments > div .flex-container > section {
+		max-width: 33%;
+	}
+
+	.architecture > .flex-container {
+		gap: 0;
+		flex-direction: row;
+	}
+
+		.architecture > .flex-container > section,
+		.architecture > .flex-container > section:nth-child(even) {
+			flex-direction: column;
+			max-width: 50%;
+		}
+
+			.architecture > .flex-container > section > * {
+				max-width: 100%;
+			}
 }
