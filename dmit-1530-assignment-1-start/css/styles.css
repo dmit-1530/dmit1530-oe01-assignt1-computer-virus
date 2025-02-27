@@ -259,20 +259,37 @@ footer {
 	text-align: left;
 }
 
+	.culture h2 {
+		margin: 0;
+	}
+
 .features {
 	background-color: var(--signup-grey);
 	color: #fff;
 }
 
+	.features h2 {
+		margin: 0;
+	}
+
 	.features img {
 		border-radius: 0.5rem;
 	}
 
-	.features > div > div {
+	.features > div {
 		text-align: left;
 	}
 
+	.features li {
+		padding: 0.5rem;
+	}
+
+	.features figcaption {
+		color: var(--subtle-text);
+	}
+
 /* Media Queries */
+
 /* Medium */
 @media (width >= 720px) {
 	.commitments > div .flex-container {
