@@ -447,4 +447,15 @@ footer {
 	}
 
 	/* Gallery Content */
+	.gallery article {
+		align-items: center;
+	}
+
+	.features > div > div > img {
+		max-width: 25%;
+	}
+
+	.features > div > div > div {
+		max-width: 75%;
+	}
 }
