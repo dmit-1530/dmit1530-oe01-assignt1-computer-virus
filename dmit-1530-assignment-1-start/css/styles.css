@@ -232,10 +232,22 @@ footer {
 		padding: 2rem 0;
 	}
 
+.terms2 {
+	display: none;
+}
+
 /* Gallery Content */
 .gallery {
 	background-color: var(--hero-grey);
 }
+
+	.gallery img {
+		border-radius: 0.5rem;
+	}
+
+	.gallery > div > article {
+		text-align: left;
+	}
 
 .quote {
 	background-color: #fff;
@@ -244,12 +256,21 @@ footer {
 .culture {
 	background-color: var(--blockquote-blue);
 	color: #fff;
+	text-align: left;
 }
 
 .features {
 	background-color: var(--signup-grey);
 	color: #fff;
 }
+
+	.features img {
+		border-radius: 0.5rem;
+	}
+
+	.features > div > div {
+		text-align: left;
+	}
 
 /* Media Queries */
 /* Medium */
@@ -310,4 +331,12 @@ footer {
 			.architecture > .flex-container > article > * {
 				max-width: 100%;
 			}
+
+	.terms {
+		display: none;
+	}
+
+	.terms2 {
+		display: inline;
+	}
 }
