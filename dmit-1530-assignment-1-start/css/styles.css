@@ -243,6 +243,11 @@ footer {
 
 	.gallery img {
 		border-radius: 0.5rem;
+		width: 100%;
+	}
+
+	.gallery figure {
+		margin: 0;
 	}
 
 	.gallery > div > article {
