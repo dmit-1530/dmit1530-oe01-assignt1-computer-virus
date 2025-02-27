@@ -213,6 +213,7 @@ footer {
 			display: flex;
 			flex-direction: column;
 			flex-wrap: wrap;
+			gap: 0.5rem;
 		}
 
 		footer nav li span {
@@ -279,14 +280,23 @@ footer {
 
 	.features img {
 		border-radius: 0.5rem;
+		width: 100%;
 	}
 
 	.features > div {
 		text-align: left;
 	}
 
+	.features ul {
+		padding-left: 1.5rem;
+	}
+
 	.features li {
 		padding: 0.5rem;
+	}
+
+	.features figure {
+		margin: 0;
 	}
 
 	.features figcaption {
