@@ -110,6 +110,7 @@ main > section {
 	width: fit-content;
 	padding: 1rem;
 	border-radius: 0.375rem;
+	margin: auto;
 }
 
 .star {
@@ -129,6 +130,10 @@ main > section {
 		border-radius: 0.5rem;
 		width: 100%;
 	}
+
+.commitments {
+	background-color: #fff;
+}
 
 .blockquote {
 	background-color: var(--blockquote-blue);
@@ -227,6 +232,25 @@ footer {
 		padding: 2rem 0;
 	}
 
+/* Gallery Content */
+.gallery {
+	background-color: var(--hero-grey);
+}
+
+.quote {
+	background-color: #fff;
+}
+
+.culture {
+	background-color: var(--blockquote-blue);
+	color: #fff;
+}
+
+.features {
+	background-color: var(--signup-grey);
+	color: #fff;
+}
+
 /* Media Queries */
 /* Medium */
 @media (width >= 720px) {
@@ -236,28 +260,28 @@ footer {
 		flex-wrap: wrap;
 	}
 
-		.commitments > div .flex-container > section {
+		.commitments > div .flex-container > article {
 			text-align: left;
 			max-width: 50%;
 			padding: 0.5rem;
 		}
 
-	.architecture > .flex-container > section {
+	.architecture > .flex-container > article {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
 	}
 
-		.architecture > .flex-container > section:nth-child(even) {
+		.architecture > .flex-container > article:nth-child(even) {
 			flex-direction: row-reverse;
 		}
 
-		.architecture > .flex-container > section > * {
+		.architecture > .flex-container > article > * {
 			max-width: 50%;
 			padding: 0.5rem;
 		}
 
-		.architecture > .flex-container > section > img {
+		.architecture > .flex-container > article > img {
 			object-fit: contain;
 		}
 
@@ -268,7 +292,7 @@ footer {
 
 /* Large */
 @media (width >= 1080px) {
-	.commitments > div .flex-container > section {
+	.commitments > div .flex-container > article {
 		max-width: 33%;
 	}
 
@@ -277,13 +301,13 @@ footer {
 		flex-direction: row;
 	}
 
-		.architecture > .flex-container > section,
-		.architecture > .flex-container > section:nth-child(even) {
+		.architecture > .flex-container > article,
+		.architecture > .flex-container > article:nth-child(even) {
 			flex-direction: column;
 			max-width: 50%;
 		}
 
-			.architecture > .flex-container > section > * {
+			.architecture > .flex-container > article > * {
 				max-width: 100%;
 			}
 }
